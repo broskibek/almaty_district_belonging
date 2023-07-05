@@ -23,7 +23,7 @@ df = pd.read_csv(csv_file)
 district_names = []
 for index, row in df.iterrows():
     # xlsx file should have 2 columns: Latitude and Longitude respectively
-    point = Point(row['Latitude'], row['Longitude'])
+    point = Point(row['Longitude'], row['Latitude'])
     district_name = None
     for name, district in districts:
         if district.contains(point):
